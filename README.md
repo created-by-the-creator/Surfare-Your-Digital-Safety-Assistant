@@ -44,7 +44,7 @@ Surfare aims to address this problem through an accessible digital safety assist
 | QR Detection | jsQR |
 | Backend / Online Services | Under development |
 | Version Control | Git and GitHub |
-
+hi
 ## Project Structure
 
 ```text
