@@ -1,0 +1,9 @@
+.feedback-cta-wrap {
+  display: flex;
+  justify-content: center;
+  margin: 18px 0 0;
+}
+
+.feedback-cta-wrap .button {
+  text-decoration: none;
+}

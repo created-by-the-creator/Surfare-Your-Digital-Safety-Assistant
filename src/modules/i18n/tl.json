@@ -1,0 +1,161 @@
+{
+  "brand": "Surfare",
+  "language": {
+    "label": "Pumili ng wika",
+    "english": "English",
+    "tagalog": "Tagalog",
+    "taglish": "Taglish"
+  },
+  "status": {
+    "online": "Online",
+    "offline": "Offline",
+    "onlineNote": "Online: may dagdag na beripikasyon.",
+    "offlineNote": "Offline mode: basic na pagsusuri lang."
+  },
+  "hero": {
+    "eyebrow": "Mas kalmadong paraan ng pag-check",
+    "headlineBefore": "Huminto muna bago ",
+    "highlight": "magtiwala.",
+    "subtitle": "Suriin ang kahina-hinalang mensahe, link, larawan, at QR code habang ginagabayan ka sa bawat hakbang."
+  },
+  "checker": {
+    "heading": "Ano ang mukhang kakaiba?",
+    "textTab": "Text",
+    "imageTab": "Larawan",
+    "qrTab": "QR Code",
+    "linkTab": "Link",
+    "pasteLabel": "I-paste ang mensahe",
+    "textPlaceholder": "I-paste ang bagay na hindi ka sigurado...",
+    "languageHint": "English • Filipino • Taglish",
+    "characterCount": "{count} / 12,000",
+    "check": "Suriin",
+    "checkImage": "Suriin ang larawan",
+    "checkQr": "Suriin ang QR Code",
+    "checkLink": "Suriin ang link",
+    "linkLabel": "I-paste ang link para suriin",
+    "linkPlaceholder": "https://example.com",
+    "linkHint": "Hindi namin bubuksan ang link. Susuriin namin ang address at mga safety signal.",
+    "dontOpen": "Huwag buksan ang link",
+    "privateCheck": "Pribado bilang default",
+    "uploadLabel": "Mag-upload ng file para suriin",
+    "dropText": "I-drop ang larawan o mag-browse",
+    "supportedTypes": "PNG, JPG, JPEG • hanggang 10 MB",
+    "chooseFile": "Pumili ng file",
+    "photoLibrary": "Photo Library",
+    "takePhoto": "Kumuha ng litrato",
+    "fileErrorType": "Pumili ng PNG, JPG, o JPEG na larawan.",
+    "fileErrorSize": "Masyadong malaki ang larawan. Pumili ng file na mas maliit sa 10 MB.",
+    "previewAlt": "Preview ng napiling larawan",
+    "crop": "I-crop",
+    "rotate": "I-rotate",
+    "removeOriginal": "Alisin ang orihinal",
+    "cameraCoach": "Gabay sa camera",
+    "blurry": "Malabo ang larawan",
+    "tooDark": "Masyadong madilim",
+    "glare": "May silaw",
+    "uploadAgain": "Pumili ng ibang larawan",
+    "demoResultLabel": "Demo result",
+    "resultChoices": {
+      "notAi": "Hindi AI",
+      "aiGenerated": "AI-generated",
+      "unclear": "Hindi malinaw ang pinagmulan"
+    }
+  },
+  "result": {
+    "heading": "Resulta mo",
+    "idleTitle": "Handa kami kapag handa ka na.",
+    "idleCopy": "Magdagdag ng susuriin. Titingnan namin ito nang mabuti.",
+    "loadingTitle": "Sinusuri naming mabuti...",
+    "loadingCopy": "Sinusuri ang mga detalyeng ibinahagi mo",
+    "progressLabel": "Kasalukuyang sinusuri",
+    "aiCheck": "AI Check",
+    "confidenceLabel": "Kumpiyansa",
+    "checksDone": "pagsusuri",
+    "indicatorsTitle": "Mga napansin namin",
+    "explanationTitle": "Sa simpleng paliwanag",
+    "nextStepsTitle": "Mga puwede mong gawin",
+    "team": "Surfare Team",
+    "saveReport": "I-save ang ulat",
+    "newCheck": "Bagong check",
+    "risk": {
+      "low": "Mababang panganib",
+      "suspicious": "Kahina-hinala",
+      "high": "Mataas na panganib"
+    },
+    "states": {
+      "notAi": {
+        "title": "Hindi AI",
+        "risk": "Mababang panganib",
+        "confidence": "Mataas ang kumpiyansa",
+        "indicators": ["Walang matibay na AI signal", "Tugma ang mga detalye", "Walang agarang pamimilit"],
+        "explanation": ["Wala kaming nakitang matibay na palatandaang AI ang gumawa nito.", "Hindi nito ginagarantiya na ligtas ang content o ang sender."],
+        "steps": ["Tiyaking kilala mo ang sender.", "Gumamit ng mapagkakatiwalaang source bago kumilos."]
+      },
+      "aiGenerated": {
+        "title": "AI-generated",
+        "risk": "Mataas na panganib",
+        "confidence": "Ilang pagsusuri ang nagawa",
+        "indicators": ["Mga synthetic na pattern", "Hindi pangkaraniwang detalye", "Hindi beripikado ang source"],
+        "explanation": ["Maaaring ginawa o binago ng AI ang ilang detalye.", "Mag-ingat at beripikahin ang pinagmulan sa ibang paraan."],
+        "steps": ["Huwag muna itong ipasa bilang totoo.", "Beripikahin ang pahayag sa mapagkakatiwalaang source.", "Huwag magpadala ng pera o personal na impormasyon."]
+      },
+      "unclear": {
+        "title": "Hindi malinaw ang pinagmulan",
+        "risk": "Kahina-hinala",
+        "confidence": "Limitado ang ebidensiya",
+        "indicators": ["Kulang ang konteksto", "Magkahalong signal", "Hindi malinaw ang source"],
+        "explanation": ["Kulang ang ebidensiya para malaman kung saan ito nanggaling.", "Hindi ibig sabihin ng hindi malinaw ay ligtas ito—beripikahin muna."],
+        "steps": ["Magtanong sa sender gamit ang ibang paraan.", "Hanapin ang parehong impormasyon sa opisyal na site."]
+      }
+    }
+  },
+  "how": {
+    "kicker": "SURFARE",
+    "heading": "Paano ito gumagana",
+    "stepOneTitle": "Ibahagi ang nakakapagtaka",
+    "stepOneCopy": "I-paste ang mensahe o magdagdag ng larawan, QR code, o link.",
+    "stepTwoTitle": "Suriin nang mabuti",
+    "stepTwoCopy": "Titingnan ng Surfare ang mga signal at ipapaliwanag ang kahulugan nito.",
+    "stepThreeTitle": "Piliin ang susunod na hakbang",
+    "stepThreeCopy": "Kumuha ng praktikal na mungkahi bago kumilos.",
+    "privacyHeading": "Mahalaga ang privacy mo",
+    "privacyCopy": "Mananatili sa device mo ang content para sa basic na pagsusuri. Kapag naka-enable ang online verification, maaaring ipadala ang ilang detalye sa external threat-checking services. Huwag magbahagi ng password o pribadong code."
+  },
+  "chat": {
+    "heading": "Magtanong kay Surfy",
+    "intro": "Tutulungan kitang pag-isipan ang susunod na gagawin.",
+    "whyQuestion": "Bakit ito kahina-hinala?",
+    "nextQuestion": "Ano ang dapat kong gawin?",
+    "learnQuestion": "Paano ko ito makikilala sa susunod?",
+    "whyAnswer": "Dahilan para mag-ingat ang warning sign, pero hindi ito patunay. Suriin kung sino ang nagpadala at beripikahin ang mahahalagang pahayag.",
+    "nextAnswer": "Huwag munang mag-click, magbayad, o magbahagi ng personal na detalye. Makipag-ugnayan sa pinagkakatiwalaang paraan.",
+    "learnAnswer": "Mag-ingat sa pagmamadali, biglaang request, kakaibang web address, at detalyeng hindi tugma. Beripikahin kapag nagdududa."
+  },
+  "feedback": {
+    "heading": "Tulungan kaming pagandahin ang Surfare",
+    "copy": "Makakatulong ang feedback mo para maging mas kapaki-pakinabang at maasikaso ang safety tools.",
+    "nameLabel": "Pangalan (opsyonal)",
+    "namePlaceholder": "Pangalan mo",
+    "ratingLabel": "Rating mo",
+    "commentLabel": "Komento mo",
+    "commentPlaceholder": "Ano ang nagustuhan mo o puwedeng pagandahin?",
+    "submit": "Ipadala ang feedback",
+    "thanks": "Salamat sa pagbabahagi ng feedback!",
+    "ratingValue": "{count} sa 5 bituin",
+    "starLabel": "{count} bituin"
+  },
+  "footer": {
+    "copy": "Malaking bagay ang kaunting paghinto.",
+    "feedbackLink": "Magbigay ng feedback",
+    "rights": "© 2026 Surfare. Maging mausisa at ligtas."
+  },
+  "accessibility": {
+    "brandHome": "Home ng Surfare",
+    "shieldIcon": "Kalasag na may check mark",
+    "selectImage": "Pumili ng larawan",
+    "rotateImage": "I-rotate ang preview ng larawan",
+    "removeImage": "Alisin ang napiling larawan",
+    "saveReport": "I-save ang ulat na ito",
+    "starRating": "Pumili ng star rating"
+  }
+}

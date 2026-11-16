@@ -1,0 +1,161 @@
+{
+  "brand": "Surfare",
+  "language": {
+    "label": "Choose language",
+    "english": "English",
+    "tagalog": "Tagalog",
+    "taglish": "Taglish"
+  },
+  "status": {
+    "online": "Online",
+    "offline": "Offline",
+    "onlineNote": "Online: extra verification enabled.",
+    "offlineNote": "Offline mode: basic checks only."
+  },
+  "hero": {
+    "eyebrow": "A calmer way to check",
+    "headlineBefore": "Pause before you ",
+    "highlight": "trust it.",
+    "subtitle": "Check suspicious messages, links, images, and QR codes with friendly guidance every step of the way."
+  },
+  "checker": {
+    "heading": "What feels off?",
+    "textTab": "Text",
+    "imageTab": "Image",
+    "qrTab": "QR Code",
+    "linkTab": "Link",
+    "pasteLabel": "Paste the message",
+    "textPlaceholder": "Paste something you're unsure about...",
+    "languageHint": "English • Filipino • Taglish",
+    "characterCount": "{count} / 12,000",
+    "check": "Check",
+    "checkImage": "Check Image",
+    "checkQr": "Check QR Code",
+    "checkLink": "Check Link",
+    "linkLabel": "Paste a link to check",
+    "linkPlaceholder": "https://example.com",
+    "linkHint": "We won't open the link. We'll check its address and available safety signals.",
+    "dontOpen": "Don't open the link",
+    "privateCheck": "Private by default",
+    "uploadLabel": "Upload a file to check",
+    "dropText": "Drop an image or browse",
+    "supportedTypes": "PNG, JPG, JPEG • up to 10 MB",
+    "chooseFile": "Choose File",
+    "photoLibrary": "Photo Library",
+    "takePhoto": "Take Photo",
+    "fileErrorType": "Please choose a PNG, JPG, or JPEG image.",
+    "fileErrorSize": "That image is too large. Choose a file under 10 MB.",
+    "previewAlt": "Selected image preview",
+    "crop": "Crop",
+    "rotate": "Rotate",
+    "removeOriginal": "Remove Original",
+    "cameraCoach": "Camera coach",
+    "blurry": "Image looks blurry",
+    "tooDark": "Too dark",
+    "glare": "Glare detected",
+    "uploadAgain": "Choose a different image",
+    "demoResultLabel": "Demo result",
+    "resultChoices": {
+      "notAi": "Not AI",
+      "aiGenerated": "AI-generated",
+      "unclear": "Origin unclear"
+    }
+  },
+  "result": {
+    "heading": "Your Result",
+    "idleTitle": "Ready when you are.",
+    "idleCopy": "Add something to check. We'll take a closer look.",
+    "loadingTitle": "Taking a closer look...",
+    "loadingCopy": "Checking the details you shared",
+    "progressLabel": "Analysis in progress",
+    "aiCheck": "AI Check",
+    "confidenceLabel": "Confidence",
+    "checksDone": "checks done",
+    "indicatorsTitle": "What we noticed",
+    "explanationTitle": "In plain language",
+    "nextStepsTitle": "Recommended next steps",
+    "team": "Surfare Team",
+    "saveReport": "Save report",
+    "newCheck": "New Check",
+    "risk": {
+      "low": "Low Risk",
+      "suspicious": "Suspicious",
+      "high": "High Risk"
+    },
+    "states": {
+      "notAi": {
+        "title": "Not AI",
+        "risk": "Low Risk",
+        "confidence": "High confidence",
+        "indicators": ["No strong AI signals", "Consistent details", "No urgent pressure"],
+        "explanation": ["We didn't find strong signs that this was made by AI.", "This doesn't guarantee that the content or sender is safe."],
+        "steps": ["Check that you recognize the sender.", "Use a trusted source before taking action."]
+      },
+      "aiGenerated": {
+        "title": "AI-generated",
+        "risk": "High Risk",
+        "confidence": "Several checks done",
+        "indicators": ["Synthetic patterns", "Unusual visual details", "Source not verified"],
+        "explanation": ["Some details may have been created or changed with AI.", "Treat the content carefully and verify its source independently."],
+        "steps": ["Don't share it as fact yet.", "Verify the claim using a trusted source.", "Avoid sending money or personal information."]
+      },
+      "unclear": {
+        "title": "Origin unclear",
+        "risk": "Suspicious",
+        "confidence": "Limited evidence",
+        "indicators": ["Not enough context", "Mixed signals", "Source unclear"],
+        "explanation": ["We couldn't gather enough evidence to tell where this came from.", "Unclear doesn't mean safe—take a moment to verify it."],
+        "steps": ["Ask the sender through another channel.", "Look for the same information on an official site."]
+      }
+    }
+  },
+  "how": {
+    "kicker": "SURFARE",
+    "heading": "How it works",
+    "stepOneTitle": "Share what feels off",
+    "stepOneCopy": "Paste a message or add an image, QR code, or link.",
+    "stepTwoTitle": "Take a closer look",
+    "stepTwoCopy": "Surfare checks helpful signals and explains what they mean.",
+    "stepThreeTitle": "Choose your next step",
+    "stepThreeCopy": "Get calm, practical suggestions before you act.",
+    "privacyHeading": "Your privacy matters",
+    "privacyCopy": "Your content stays on this device for basic checks. If online verification is enabled, limited details may be sent to external threat-checking services. Never share passwords or private codes."
+  },
+  "chat": {
+    "heading": "Ask Surfy",
+    "intro": "I can help you think through what to do next.",
+    "whyQuestion": "Why is this suspicious?",
+    "nextQuestion": "What should I do next?",
+    "learnQuestion": "How can I spot this next time?",
+    "whyAnswer": "A warning sign is a reason to pause, not proof by itself. Check who sent it and verify important claims another way.",
+    "nextAnswer": "Don't click, pay, or share personal details yet. Contact the person or organization using a trusted channel.",
+    "learnAnswer": "Watch for urgency, unexpected requests, odd web addresses, and details that don't match. When in doubt, verify independently."
+  },
+  "feedback": {
+    "heading": "Help us make Surfare better",
+    "copy": "Your feedback helps us make safety tools more useful and welcoming.",
+    "nameLabel": "Name (optional)",
+    "namePlaceholder": "Your name",
+    "ratingLabel": "Your rating",
+    "commentLabel": "Your comment",
+    "commentPlaceholder": "What worked well, or what could be better?",
+    "submit": "Send feedback",
+    "thanks": "Thanks for sharing your feedback!",
+    "ratingValue": "{count} out of 5 stars",
+    "starLabel": "{count} stars"
+  },
+  "footer": {
+    "copy": "A little pause can make a big difference.",
+    "feedbackLink": "Give feedback",
+    "rights": "© 2026 Surfare. Stay curious, stay safe."
+  },
+  "accessibility": {
+    "brandHome": "Surfare home",
+    "shieldIcon": "Shield with a check mark",
+    "selectImage": "Choose an image",
+    "rotateImage": "Rotate image preview",
+    "removeImage": "Remove selected image",
+    "saveReport": "Save this report",
+    "starRating": "Choose a star rating"
+  }
+}

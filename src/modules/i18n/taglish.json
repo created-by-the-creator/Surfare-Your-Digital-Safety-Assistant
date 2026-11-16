@@ -1,0 +1,161 @@
+{
+  "brand": "Surfare",
+  "language": {
+    "label": "Choose language",
+    "english": "English",
+    "tagalog": "Tagalog",
+    "taglish": "Taglish"
+  },
+  "status": {
+    "online": "Online",
+    "offline": "Offline",
+    "onlineNote": "Online: may extra verification.",
+    "offlineNote": "Offline mode: basic checks lang."
+  },
+  "hero": {
+    "eyebrow": "Mas kalmadong way para mag-check",
+    "headlineBefore": "Pause muna bago ",
+    "highlight": "magtiwala.",
+    "subtitle": "I-check ang suspicious messages, links, images, at QR codes with friendly guidance sa bawat step."
+  },
+  "checker": {
+    "heading": "Ano ang parang off?",
+    "textTab": "Text",
+    "imageTab": "Image",
+    "qrTab": "QR Code",
+    "linkTab": "Link",
+    "pasteLabel": "I-paste ang message",
+    "textPlaceholder": "I-paste ang bagay na hindi ka sure...",
+    "languageHint": "English • Filipino • Taglish",
+    "characterCount": "{count} / 12,000",
+    "check": "I-check",
+    "checkImage": "I-check ang Image",
+    "checkQr": "I-check ang QR Code",
+    "checkLink": "I-check ang Link",
+    "linkLabel": "I-paste ang link para i-check",
+    "linkPlaceholder": "https://example.com",
+    "linkHint": "Hindi namin io-open ang link. Iche-check ang address at available safety signals.",
+    "dontOpen": "Huwag i-open ang link",
+    "privateCheck": "Private by default",
+    "uploadLabel": "Mag-upload ng file para i-check",
+    "dropText": "I-drop ang image o mag-browse",
+    "supportedTypes": "PNG, JPG, JPEG • hanggang 10 MB",
+    "chooseFile": "Choose File",
+    "photoLibrary": "Photo Library",
+    "takePhoto": "Take Photo",
+    "fileErrorType": "Pumili ng PNG, JPG, o JPEG image.",
+    "fileErrorSize": "Masyadong malaki ang image. Pumili ng file na under 10 MB.",
+    "previewAlt": "Preview ng selected image",
+    "crop": "Crop",
+    "rotate": "Rotate",
+    "removeOriginal": "Remove Original",
+    "cameraCoach": "Camera coach",
+    "blurry": "Mukhang blurry ang image",
+    "tooDark": "Masyadong dark",
+    "glare": "May glare",
+    "uploadAgain": "Pumili ng ibang image",
+    "demoResultLabel": "Demo result",
+    "resultChoices": {
+      "notAi": "Not AI",
+      "aiGenerated": "AI-generated",
+      "unclear": "Unclear ang origin"
+    }
+  },
+  "result": {
+    "heading": "Result mo",
+    "idleTitle": "Ready kami kapag ready ka na.",
+    "idleCopy": "Magdagdag ng iche-check. Titingnan namin ito nang mabuti.",
+    "loadingTitle": "Tinitingnan naming mabuti...",
+    "loadingCopy": "Checking ang details na shinare mo",
+    "progressLabel": "In progress ang analysis",
+    "aiCheck": "AI Check",
+    "confidenceLabel": "Confidence",
+    "checksDone": "checks done",
+    "indicatorsTitle": "Mga napansin namin",
+    "explanationTitle": "Simple explanation",
+    "nextStepsTitle": "Recommended next steps",
+    "team": "Surfare Team",
+    "saveReport": "Save report",
+    "newCheck": "New Check",
+    "risk": {
+      "low": "Low Risk",
+      "suspicious": "Suspicious",
+      "high": "High Risk"
+    },
+    "states": {
+      "notAi": {
+        "title": "Not AI",
+        "risk": "Low Risk",
+        "confidence": "High confidence",
+        "indicators": ["Walang strong AI signals", "Consistent ang details", "Walang urgent pressure"],
+        "explanation": ["Wala kaming nakitang strong signs na AI ang gumawa nito.", "Hindi nito guaranteed na safe ang content o sender."],
+        "steps": ["I-check kung kilala mo ang sender.", "Gumamit ng trusted source bago mag-take ng action."]
+      },
+      "aiGenerated": {
+        "title": "AI-generated",
+        "risk": "High Risk",
+        "confidence": "Ilang checks ang nagawa",
+        "indicators": ["Synthetic patterns", "Unusual visual details", "Hindi verified ang source"],
+        "explanation": ["May ilang details na posibleng ginawa o binago gamit ang AI.", "Mag-ingat at i-verify ang source nang independent."],
+        "steps": ["Huwag muna itong i-share bilang fact.", "I-verify ang claim gamit ang trusted source.", "Huwag mag-send ng pera o personal info."]
+      },
+      "unclear": {
+        "title": "Unclear ang origin",
+        "risk": "Suspicious",
+        "confidence": "Limited ang evidence",
+        "indicators": ["Kulang ang context", "Mixed signals", "Unclear ang source"],
+        "explanation": ["Kulang ang evidence para malaman kung saan ito nanggaling.", "Hindi ibig sabihin ng unclear ay safe—mag-verify muna."],
+        "steps": ["Magtanong sa sender gamit ang ibang channel.", "Hanapin ang parehong info sa official site."]
+      }
+    }
+  },
+  "how": {
+    "kicker": "SURFARE",
+    "heading": "Paano ito gumagana",
+    "stepOneTitle": "I-share ang parang off",
+    "stepOneCopy": "I-paste ang message o magdagdag ng image, QR code, o link.",
+    "stepTwoTitle": "Tingnan nang mabuti",
+    "stepTwoCopy": "Titingnan ng Surfare ang helpful signals at ie-explain ang meaning.",
+    "stepThreeTitle": "Piliin ang next step",
+    "stepThreeCopy": "Kumuha ng practical suggestions bago kumilos.",
+    "privacyHeading": "Importante ang privacy mo",
+    "privacyCopy": "Mananatili sa device mo ang content para sa basic checks. Kapag enabled ang online verification, maaaring ipadala ang limited details sa external threat-checking services. Huwag mag-share ng passwords o private codes."
+  },
+  "chat": {
+    "heading": "Ask Surfy",
+    "intro": "Tutulungan kitang pag-isipan kung ano ang next na gagawin.",
+    "whyQuestion": "Bakit suspicious ito?",
+    "nextQuestion": "Ano ang dapat kong gawin next?",
+    "learnQuestion": "Paano ko ito ma-spot next time?",
+    "whyAnswer": "Reason para mag-pause ang warning sign, hindi proof by itself. I-check kung sino ang sender at i-verify ang important claims sa ibang paraan.",
+    "nextAnswer": "Huwag muna mag-click, magbayad, o mag-share ng personal details. Contact-in ang tao o organization gamit ang trusted channel.",
+    "learnAnswer": "Mag-watch out sa urgency, unexpected requests, odd web addresses, at details na hindi match. Mag-verify independently kapag duda."
+  },
+  "feedback": {
+    "heading": "Tulungan kaming i-improve ang Surfare",
+    "copy": "Makakatulong ang feedback mo para maging mas useful at welcoming ang safety tools.",
+    "nameLabel": "Name (optional)",
+    "namePlaceholder": "Name mo",
+    "ratingLabel": "Rating mo",
+    "commentLabel": "Comment mo",
+    "commentPlaceholder": "Ano ang nag-work well o puwedeng i-improve?",
+    "submit": "I-send ang feedback",
+    "thanks": "Salamat sa pag-share ng feedback!",
+    "ratingValue": "{count} sa 5 stars",
+    "starLabel": "{count} stars"
+  },
+  "footer": {
+    "copy": "Malaking bagay ang konting pause.",
+    "feedbackLink": "Magbigay ng feedback",
+    "rights": "© 2026 Surfare. Stay curious, stay safe."
+  },
+  "accessibility": {
+    "brandHome": "Surfare home",
+    "shieldIcon": "Shield na may check mark",
+    "selectImage": "Pumili ng image",
+    "rotateImage": "I-rotate ang image preview",
+    "removeImage": "Alisin ang selected image",
+    "saveReport": "I-save ang report na ito",
+    "starRating": "Pumili ng star rating"
+  }
+}
