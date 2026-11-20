@@ -1,0 +1,32 @@
+{
+  "name": "surfare-backend",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "engines": { "node": ">=22.13.0" },
+  "exports": {
+    ".": "./index.js",
+    "./browser": "./browser.js",
+    "./feedback": "./client/feedback-store.js"
+  },
+  "scripts": {
+    "start": "node --env-file-if-exists=.dev.vars server/start.js",
+    "dev": "node --env-file-if-exists=.dev.vars --watch server/start.js",
+    "worker:dev": "wrangler dev",
+    "worker:deploy": "wrangler deploy",
+    "test": "node --test tests/*.test.mjs",
+    "test:ocr": "node scripts/copy-ocr.mjs && node --test tests/ocr.integration.mjs",
+    "prepare:ocr": "node scripts/copy-ocr.mjs",
+    "check:secrets": "node scripts/check-secrets.mjs",
+    "check": "npm run check:secrets && npm test"
+  },
+  "dependencies": {
+    "@tesseract.js-data/eng": "1.0.0",
+    "jsqr": "1.4.0",
+    "tesseract.js": "6.0.1",
+    "tldts": "7.4.19"
+  },
+  "devDependencies": {
+    "wrangler": "^4.61.1"
+  }
+}

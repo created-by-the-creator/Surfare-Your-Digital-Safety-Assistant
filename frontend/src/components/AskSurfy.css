@@ -1,0 +1,275 @@
+.check-columns > .ask-panel-position {
+  position: relative;
+  inset: auto;
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  max-height: none;
+  flex: 0 0 auto;
+  aspect-ratio: auto;
+  grid-column: 1 / -1;
+  grid-row: 2;
+  margin-top: 0;
+  padding: 0;
+  pointer-events: auto;
+  scroll-margin-top: 88px;
+  scroll-margin-bottom: 112px;
+}
+.check-columns.has-ask-panel > .check-result-column { grid-column: 2; grid-row: 1; }
+@media (max-width: 1023px) {
+  .check-columns.has-ask-panel > .check-result-column { grid-column: 1; grid-row: 3; }
+}
+.ask-panel-position > .ask-dialog {
+  position: relative;
+  isolation: isolate;
+  inset: auto;
+  display: block;
+  width: 100%;
+  height: auto;
+  min-height: 0;
+  max-height: none;
+  padding: 20px;
+  overflow: hidden;
+  border: 1px solid #a8c5ef38;
+  border-radius: 24px;
+  background: #102c57;
+  box-shadow: 0 14px 32px #0b2e731c;
+  color: #fff;
+  container-type: normal;
+  animation: none;
+}
+.ask-dialog .ask-brand {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  width: 100%;
+  min-height: 64px;
+  align-items: center;
+  gap: 14px;
+  margin: 0 0 18px;
+  padding: 0 0 16px;
+  border-bottom: 1px solid #b4d1f226;
+}
+.ask-dialog .ask-avatar {
+  position: relative;
+  display: block;
+  width: 60px;
+  height: 60px;
+  flex: 0 0 60px;
+  overflow: hidden;
+  border: 2px solid #ffffffa3;
+  border-radius: 20px;
+  background: #fce0d4;
+  box-shadow: 0 4px 14px #04152c24;
+}
+.ask-dialog .ask-avatar img {
+  position: absolute;
+  top: -8px;
+  left: -26px;
+  width: 116px;
+  max-width: none;
+  height: 116px;
+  aspect-ratio: 1;
+  object-fit: contain;
+  transform: none;
+}
+.ask-dialog .ask-heading { flex: 1; min-width: 0; }
+.ask-dialog .ask-eyebrow { margin: 0 0 5px; color: #a9c9ed; font-size: 12px; font-weight: 500; line-height: 1.4; letter-spacing: .09em; text-transform: uppercase; }
+.ask-dialog .ask-brand h2 {
+  position: static;
+  margin: 0;
+  background: none;
+  color: #fff;
+  -webkit-text-fill-color: #fff;
+  font-family: 'Fraunces Variable', Georgia, serif;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.15;
+  white-space: normal;
+}
+.ask-dialog .ask-toggle {
+  display: grid;
+  width: 40px;
+  height: 44px;
+  flex: 0 0 40px;
+  place-items: center;
+  align-self: flex-start;
+  padding: 0;
+  border: 1px solid #b4d1f238;
+  border-radius: 13px;
+  background: #ffffff0a;
+  color: #d9eafa;
+  cursor: pointer;
+}
+.ask-dialog .ask-toggle:hover { background: #ffffff17; }
+.ask-dialog .ask-content {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  min-width: 0;
+  min-height: 0;
+  grid-template-rows: auto auto auto;
+  gap: 14px;
+  padding: 0;
+}
+.ask-dialog .ask-messages {
+  display: flex;
+  min-width: 0;
+  min-height: 0;
+  max-height: min(280px, 42dvh);
+  flex-direction: column;
+  gap: 10px;
+  padding: 2px 5px 6px 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
+  scrollbar-color: #789cc6 transparent;
+  overscroll-behavior: contain;
+}
+.ask-dialog .ask-messages::-webkit-scrollbar { width: 5px; }
+.ask-dialog .ask-messages::-webkit-scrollbar-track { background: transparent; }
+.ask-dialog .ask-messages::-webkit-scrollbar-thumb { border: 0; border-radius: 4px; background: #789cc6; }
+.ask-dialog .ask-messages::-webkit-scrollbar-button { display: none; }
+.ask-dialog .ask-welcome { margin: 0; padding: 2px 0 4px; color: #d2e2f5; font-size: 16px; line-height: 1.55; }
+.ask-dialog .ask-messages[data-scrolled="true"] { mask-image: linear-gradient(to bottom, transparent, #000 12px); -webkit-mask-image: linear-gradient(to bottom, transparent, #000 12px); }
+.ask-dialog .chat-bubble {
+  width: fit-content;
+  max-width: min(90%, 68ch);
+  flex: 0 0 auto;
+  margin: 0;
+  padding: 12px 15px;
+  border: 1px solid transparent;
+  border-radius: 17px;
+  background: #edf5ff;
+  color: #214466;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+.ask-dialog .chat-bubble::after { display: none; }
+.ask-dialog .chat-surfy { align-self: flex-start; border-bottom-left-radius: 5px; }
+.ask-dialog .chat-user { align-self: flex-end; max-width: 85%; margin-right: 0; border-color: #a6ccff30; border-bottom-right-radius: 5px; background: #24558e; color: #fff; }
+.ask-dialog .chat-typing { min-height: 42px; min-width: 64px; }
+.ask-dialog .chat-typing i { background: #47749e; }
+.ask-dialog .ask-result-divider { margin-block: 4px; color: #aec8e6; font-size: 12px; }
+.ask-dialog .ask-result-divider::before, .ask-dialog .ask-result-divider::after { background: #b4d1f226; }
+.ask-dialog .ask-chips { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; justify-content: stretch; }
+.ask-dialog .ask-chip {
+  min-width: 0;
+  min-height: 40px;
+  padding: 8px 11px;
+  border: 1px solid #b9d3f033;
+  border-radius: 12px;
+  background: #ffffff08;
+  color: #dbe9f8;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.3;
+  text-align: left;
+  transition: background .2s ease, border-color .2s ease;
+}
+.ask-dialog .ask-chip:hover { border-color: #b9d3f080; background: #ffffff15; }
+.ask-dialog .ask-form {
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  min-height: 52px;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #dce8f5;
+  border-radius: 16px;
+  background: #f9fcff;
+  transition: box-shadow .2s ease;
+  scroll-margin-bottom: 120px;
+}
+.ask-dialog .ask-form:focus-within { border-color: #89b5ea; box-shadow: 0 0 0 3px #93bfff29; }
+.ask-dialog .ask-form textarea {
+  width: 100%;
+  min-width: 0;
+  min-height: 52px;
+  max-height: 118px;
+  margin: 0;
+  padding: 14px 62px 12px 16px;
+  border: 0;
+  border-radius: inherit;
+  background: transparent;
+  color: #17365b;
+  font-size: 16px;
+  line-height: 1.45;
+  outline: none;
+  resize: none;
+}
+.ask-dialog .ask-form textarea::placeholder { color: #7890aa; }
+.ask-dialog .ask-form > button {
+  position: absolute;
+  right: 6px;
+  bottom: 5px;
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  padding: 11px;
+  border: 0;
+  border-radius: 11px;
+  background: #d23f3c;
+  color: #fff;
+}
+.ask-dialog .ask-form > button svg { width: 20px; height: 20px; fill: none; stroke: currentColor; }
+.ask-dialog .ask-form > button:disabled { opacity: .4; }
+.ask-dialog .ask-wave { position: absolute; z-index: 0; right: -5%; bottom: -2px; left: -5%; height: 64px; opacity: .18; pointer-events: none; }
+.ask-wave svg { width: 100%; height: 100%; }
+.ask-panel-position > .ask-dialog.is-collapsed { height: auto; min-height: 0; padding: 16px 20px; }
+.ask-dialog.is-collapsed .ask-brand { margin: 0; padding: 0; border: 0; }
+.ask-dialog.is-collapsed .ask-content { display: none; }
+.ask-panel-position > .ask-dialog.is-collapsed .ask-avatar img { width: 116px; height: 116px; }
+
+@media (max-width: 767px) {
+  .ask-panel-position > .ask-dialog { padding: 18px 16px; border-radius: 22px; }
+  .ask-dialog .ask-brand { gap: 11px; margin-bottom: 14px; padding-bottom: 14px; }
+  .ask-dialog .ask-avatar { width: 48px; height: 48px; flex-basis: 48px; border-radius: 16px; }
+  .ask-dialog .ask-avatar img { width: 96px; height: 96px; top: -7px; left: -23px; }
+  .ask-dialog .ask-brand h2 { font-size: 23px; }
+  .ask-dialog .ask-eyebrow { font-size: 11px; letter-spacing: .04em; }
+  .ask-dialog .ask-content { gap: 12px; }
+  .ask-dialog .ask-chips { display: flex; flex-direction: row; flex-wrap: nowrap; align-items: stretch; gap: 8px; overflow-x: auto; padding-bottom: 4px; scrollbar-width: thin; scrollbar-color: #789cc6 transparent; scroll-snap-type: x proximity; }
+  .ask-dialog .ask-chip { flex: 0 0 auto; max-width: 90%; min-height: 44px; padding: 8px 13px; border-radius: 999px; font-size: 14px; scroll-snap-align: start; }
+  .ask-dialog .ask-messages { max-height: clamp(88px, 24dvh, 220px); }
+  .ask-dialog .chat-bubble { max-width: 95%; padding: 11px 13px; }
+  .ask-dialog .chat-user { max-width: 88%; }
+  .ask-panel-position > .ask-dialog.is-collapsed { padding: 14px 16px; }
+  .ask-panel-position > .ask-dialog.is-collapsed .ask-avatar img { width: 96px; height: 96px; }
+}
+@media (min-width: 1024px) {
+  .ask-dialog .ask-chips { display: flex; flex-wrap: wrap; justify-content: flex-start; }
+  .ask-dialog .ask-chip { width: auto; max-width: 100%; flex: 0 1 auto; padding-inline: 13px; }
+  .check-columns.has-ask-panel.has-check-result { grid-template-rows: var(--check-input-row, min-content) auto; }
+  .check-columns.has-ask-panel.has-check-result > .check-result-column { grid-row: 1 / span 2; }
+  .check-columns.has-ask-panel.has-check-result > .ask-panel-position { grid-column: 1; grid-row: 2; }
+}
+@media (prefers-reduced-motion: no-preference) {
+  .ask-panel-position > .ask-dialog { animation: ask-soft-arrival .6s cubic-bezier(.22, 1, .36, 1) both; }
+  .ask-panel-position > .ask-dialog.is-closing { animation: ask-soft-departure .24s ease forwards; }
+  .ask-dialog .chat-bubble { animation: ask-message-arrival .42s cubic-bezier(.22, 1, .36, 1) both; }
+  .ask-dialog .ask-content { animation: ask-message-arrival .35s cubic-bezier(.22, 1, .36, 1) both; }
+  .ask-dialog .ask-wave { animation: ask-wave-drift 8s ease-in-out infinite; }
+  .ask-dialog .ask-avatar { animation: ask-avatar-nod 6s ease-in-out infinite; }
+}
+@keyframes ask-soft-arrival {
+  0% { opacity: 0; filter: blur(7px); translate: 0 18px; scale: .985; }
+  65% { opacity: 1; filter: blur(0); translate: 0 -2px; scale: 1.002; }
+  100% { opacity: 1; filter: none; translate: none; scale: 1; }
+}
+@keyframes ask-message-arrival {
+  0% { opacity: 0; filter: blur(3px); translate: 0 8px; scale: .985; }
+  75% { opacity: 1; filter: none; translate: 0 -1px; scale: 1; }
+  100% { opacity: 1; filter: none; translate: none; scale: 1; }
+}
+@keyframes ask-soft-departure { to { opacity: 0; filter: blur(4px); translate: 0 10px; } }
+@keyframes ask-wave-drift { 0%, 100% { translate: -1% 2px; } 50% { translate: 1% -2px; } }
+@keyframes ask-avatar-nod { 0%, 100% { rotate: -.6deg; } 50% { rotate: .6deg; } }
+@media (prefers-reduced-motion: reduce) {
+  .ask-panel-position > .ask-dialog, .ask-dialog .ask-content, .ask-dialog .chat-bubble, .ask-dialog .ask-wave, .ask-dialog .ask-avatar, .ask-dialog .chat-typing i { animation: none; }
+  .ask-dialog .ask-form, .ask-dialog .ask-chip { transition: none; }
+}

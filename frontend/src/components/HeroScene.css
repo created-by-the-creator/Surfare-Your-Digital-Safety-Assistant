@@ -1,0 +1,179 @@
+.hero { --surf-cycle: 6.6s; --surf-drift: 20px; --surf-lift: 8px; --sea-drift: 1.4%; }
+
+.hero-sun {
+  position: absolute;
+  z-index: 1;
+  top: -104px;
+  left: -104px;
+  width: clamp(220px, 19vw, 280px);
+  aspect-ratio: 1;
+  pointer-events: none;
+}
+.hero-sun svg { position: relative; width: 100%; height: 100%; overflow: visible; }
+.sun-halo {
+  position: absolute;
+  inset: -55%;
+  border-radius: 50%;
+  background: radial-gradient(circle, #ffd99166 0%, #ffc16a30 30%, #ffab6214 48%, transparent 70%);
+}
+.sun-rays { transform-origin: 60px 60px; opacity: .75; }
+.sun-core { transform-origin: 60px 60px; filter: drop-shadow(0 0 18px #ffcc7b99) drop-shadow(0 0 38px #ffb56b55); }
+
+.surf-rider { position: relative; width: 100%; transform-origin: 52% 91%; }
+.hero-mascot {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 3px 4px #063f7624);
+}
+.surf-water-shadow {
+  position: absolute;
+  z-index: 1;
+  right: 5%;
+  bottom: 1%;
+  left: 10%;
+  height: 9%;
+  border-radius: 50%;
+  background: #005cb53b;
+  filter: blur(5px);
+  transform: rotate(8deg);
+}
+.surf-contact {
+  position: absolute;
+  z-index: 3;
+  bottom: -1%;
+  left: -2%;
+  width: 104%;
+  height: 23%;
+  overflow: visible;
+  pointer-events: none;
+}
+.surf-wake-blue { fill: none; stroke: #16b6f1; stroke-width: 7; stroke-linecap: round; stroke-opacity: .45; }
+.surf-wake-foam { fill: none; stroke: #fff; stroke-width: 3.5; stroke-linecap: round; stroke-opacity: .9; stroke-dasharray: 48 9 66 12 37 8; }
+.surf-wake-trail { fill: none; stroke: #a4e6ff; stroke-width: 2; stroke-linecap: round; stroke-opacity: .6; }
+.surf-spray { position: absolute; z-index: 3; top: 82%; left: 86%; }
+.surf-spray i {
+  position: absolute;
+  width: 5px;
+  height: 8px;
+  border-radius: 60% 60% 55% 55%;
+  background: #d9f6ff;
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .surf-rider { animation: surf-carve var(--surf-cycle) linear infinite; }
+  .hero .wave-stage { animation: sea-roll var(--surf-cycle) linear infinite; }
+  .surf-contact { animation: surf-contact-pulse 3.3s ease-in-out infinite; }
+  .surf-spray i { animation: surf-spray 1.8s ease-out infinite; animation-delay: calc(var(--spray-index) * -.45s); }
+  .sun-rays { animation: sun-rays-turn 48s linear infinite; }
+  .sun-halo { animation: sun-warmth 7s ease-in-out infinite; }
+  .sun-core { animation: sun-breathe 7s ease-in-out infinite; }
+}
+
+@keyframes surf-contact-pulse {
+  0%, 100% { opacity: .7; scale: .97 1; }
+  50% { opacity: 1; scale: 1.025 1.08; }
+}
+@keyframes surf-spray {
+  0% { opacity: 0; transform: translate(0, 0) rotate(-22deg) scale(.5); }
+  15% { opacity: .85; }
+  100% { opacity: 0; transform: translate(30px, -24px) rotate(30deg) scale(.2); }
+}
+@keyframes sun-rays-turn { to { rotate: 360deg; } }
+@keyframes sun-warmth {
+  0%, 100% { opacity: .65; scale: .94; }
+  50% { opacity: 1; scale: 1.08; }
+}
+@keyframes sun-breathe {
+  0%, 100% { scale: 1; translate: 0 1px; }
+  50% { scale: 1.025; translate: 0 -2px; }
+}
+
+@media (max-width: 1023px) {
+  .hero-sun { left: -82px; top: -82px; width: 210px; }
+}
+@media (max-width: 640px) {
+  .hero { --surf-drift: 5px; --surf-lift: 4px; --sea-drift: 3%; }
+  .hero-sun { top: -62px; left: -62px; width: 154px; }
+  .surf-spray i { width: 3px; height: 5px; }
+  .surf-wake-foam { stroke-width: 4; }
+}
+@media (max-width: 359px) {
+  .hero-sun { top: -56px; left: -56px; width: 140px; }
+}
+
+@keyframes surf-carve {
+  0% { translate: calc(var(--surf-drift) * 0.5000) calc(var(--surf-lift) * 0); rotate: 1.4849deg; }
+  3.125% { translate: calc(var(--surf-drift) * 0.3214) calc(var(--surf-lift) * 0.1951); rotate: 1.7461deg; }
+  6.25% { translate: calc(var(--surf-drift) * 0.1305) calc(var(--surf-lift) * 0.3827); rotate: 1.9401deg; }
+  9.375% { translate: calc(var(--surf-drift) * -0.0654) calc(var(--surf-lift) * 0.5556); rotate: 2.0596deg; }
+  12.5% { translate: calc(var(--surf-drift) * -0.2588) calc(var(--surf-lift) * 0.7071); rotate: 2.1000deg; }
+  15.625% { translate: calc(var(--surf-drift) * -0.4423) calc(var(--surf-lift) * 0.8315); rotate: 2.0596deg; }
+  18.75% { translate: calc(var(--surf-drift) * -0.6088) calc(var(--surf-lift) * 0.9239); rotate: 1.9401deg; }
+  21.875% { translate: calc(var(--surf-drift) * -0.7518) calc(var(--surf-lift) * 0.9808); rotate: 1.7461deg; }
+  25% { translate: calc(var(--surf-drift) * -0.8660) calc(var(--surf-lift) * 1.0000); rotate: 1.4849deg; }
+  28.125% { translate: calc(var(--surf-drift) * -0.9469) calc(var(--surf-lift) * 0.9808); rotate: 1.1667deg; }
+  31.25% { translate: calc(var(--surf-drift) * -0.9914) calc(var(--surf-lift) * 0.9239); rotate: 0.8036deg; }
+  34.375% { translate: calc(var(--surf-drift) * -0.9979) calc(var(--surf-lift) * 0.8315); rotate: 0.4097deg; }
+  37.5% { translate: calc(var(--surf-drift) * -0.9659) calc(var(--surf-lift) * 0.7071); rotate: 0deg; }
+  40.625% { translate: calc(var(--surf-drift) * -0.8969) calc(var(--surf-lift) * 0.5556); rotate: -0.4097deg; }
+  43.75% { translate: calc(var(--surf-drift) * -0.7934) calc(var(--surf-lift) * 0.3827); rotate: -0.8036deg; }
+  46.875% { translate: calc(var(--surf-drift) * -0.6593) calc(var(--surf-lift) * 0.1951); rotate: -1.1667deg; }
+  50% { translate: calc(var(--surf-drift) * -0.5000) calc(var(--surf-lift) * 0); rotate: -1.4849deg; }
+  53.125% { translate: calc(var(--surf-drift) * -0.3214) calc(var(--surf-lift) * -0.1951); rotate: -1.7461deg; }
+  56.25% { translate: calc(var(--surf-drift) * -0.1305) calc(var(--surf-lift) * -0.3827); rotate: -1.9401deg; }
+  59.375% { translate: calc(var(--surf-drift) * 0.0654) calc(var(--surf-lift) * -0.5556); rotate: -2.0596deg; }
+  62.5% { translate: calc(var(--surf-drift) * 0.2588) calc(var(--surf-lift) * -0.7071); rotate: -2.1000deg; }
+  65.625% { translate: calc(var(--surf-drift) * 0.4423) calc(var(--surf-lift) * -0.8315); rotate: -2.0596deg; }
+  68.75% { translate: calc(var(--surf-drift) * 0.6088) calc(var(--surf-lift) * -0.9239); rotate: -1.9401deg; }
+  71.875% { translate: calc(var(--surf-drift) * 0.7518) calc(var(--surf-lift) * -0.9808); rotate: -1.7461deg; }
+  75% { translate: calc(var(--surf-drift) * 0.8660) calc(var(--surf-lift) * -1.0000); rotate: -1.4849deg; }
+  78.125% { translate: calc(var(--surf-drift) * 0.9469) calc(var(--surf-lift) * -0.9808); rotate: -1.1667deg; }
+  81.25% { translate: calc(var(--surf-drift) * 0.9914) calc(var(--surf-lift) * -0.9239); rotate: -0.8036deg; }
+  84.375% { translate: calc(var(--surf-drift) * 0.9979) calc(var(--surf-lift) * -0.8315); rotate: -0.4097deg; }
+  87.5% { translate: calc(var(--surf-drift) * 0.9659) calc(var(--surf-lift) * -0.7071); rotate: 0deg; }
+  90.625% { translate: calc(var(--surf-drift) * 0.8969) calc(var(--surf-lift) * -0.5556); rotate: 0.4097deg; }
+  93.75% { translate: calc(var(--surf-drift) * 0.7934) calc(var(--surf-lift) * -0.3827); rotate: 0.8036deg; }
+  96.875% { translate: calc(var(--surf-drift) * 0.6593) calc(var(--surf-lift) * -0.1951); rotate: 1.1667deg; }
+  100% { translate: calc(var(--surf-drift) * 0.5000) calc(var(--surf-lift) * 0); rotate: 1.4849deg; }
+}
+
+@keyframes sea-roll {
+  0% { transform: translate3d(calc(var(--sea-drift) * 1.0000), 3.0000px, 0) scale(1.075, 1.0350); }
+  3.125% { transform: translate3d(calc(var(--sea-drift) * 0.9808), 3.5853px, 0) scale(1.075, 1.0385); }
+  6.25% { transform: translate3d(calc(var(--sea-drift) * 0.9239), 4.1481px, 0) scale(1.075, 1.0419); }
+  9.375% { transform: translate3d(calc(var(--sea-drift) * 0.8315), 4.6667px, 0) scale(1.075, 1.0450); }
+  12.5% { transform: translate3d(calc(var(--sea-drift) * 0.7071), 5.1213px, 0) scale(1.075, 1.0477); }
+  15.625% { transform: translate3d(calc(var(--sea-drift) * 0.5556), 5.4944px, 0) scale(1.075, 1.0500); }
+  18.75% { transform: translate3d(calc(var(--sea-drift) * 0.3827), 5.7716px, 0) scale(1.075, 1.0516); }
+  21.875% { transform: translate3d(calc(var(--sea-drift) * 0.1951), 5.9424px, 0) scale(1.075, 1.0527); }
+  25% { transform: translate3d(calc(var(--sea-drift) * 0), 6.0000px, 0) scale(1.075, 1.0530); }
+  28.125% { transform: translate3d(calc(var(--sea-drift) * -0.1951), 5.9424px, 0) scale(1.075, 1.0527); }
+  31.25% { transform: translate3d(calc(var(--sea-drift) * -0.3827), 5.7716px, 0) scale(1.075, 1.0516); }
+  34.375% { transform: translate3d(calc(var(--sea-drift) * -0.5556), 5.4944px, 0) scale(1.075, 1.0500); }
+  37.5% { transform: translate3d(calc(var(--sea-drift) * -0.7071), 5.1213px, 0) scale(1.075, 1.0477); }
+  40.625% { transform: translate3d(calc(var(--sea-drift) * -0.8315), 4.6667px, 0) scale(1.075, 1.0450); }
+  43.75% { transform: translate3d(calc(var(--sea-drift) * -0.9239), 4.1481px, 0) scale(1.075, 1.0419); }
+  46.875% { transform: translate3d(calc(var(--sea-drift) * -0.9808), 3.5853px, 0) scale(1.075, 1.0385); }
+  50% { transform: translate3d(calc(var(--sea-drift) * -1.0000), 3.0000px, 0) scale(1.075, 1.0350); }
+  53.125% { transform: translate3d(calc(var(--sea-drift) * -0.9808), 2.4147px, 0) scale(1.075, 1.0315); }
+  56.25% { transform: translate3d(calc(var(--sea-drift) * -0.9239), 1.8519px, 0) scale(1.075, 1.0281); }
+  59.375% { transform: translate3d(calc(var(--sea-drift) * -0.8315), 1.3333px, 0) scale(1.075, 1.0250); }
+  62.5% { transform: translate3d(calc(var(--sea-drift) * -0.7071), 0.8787px, 0) scale(1.075, 1.0223); }
+  65.625% { transform: translate3d(calc(var(--sea-drift) * -0.5556), 0.5056px, 0) scale(1.075, 1.0200); }
+  68.75% { transform: translate3d(calc(var(--sea-drift) * -0.3827), 0.2284px, 0) scale(1.075, 1.0184); }
+  71.875% { transform: translate3d(calc(var(--sea-drift) * -0.1951), 0.0576px, 0) scale(1.075, 1.0173); }
+  75% { transform: translate3d(calc(var(--sea-drift) * 0), 0px, 0) scale(1.075, 1.0170); }
+  78.125% { transform: translate3d(calc(var(--sea-drift) * 0.1951), 0.0576px, 0) scale(1.075, 1.0173); }
+  81.25% { transform: translate3d(calc(var(--sea-drift) * 0.3827), 0.2284px, 0) scale(1.075, 1.0184); }
+  84.375% { transform: translate3d(calc(var(--sea-drift) * 0.5556), 0.5056px, 0) scale(1.075, 1.0200); }
+  87.5% { transform: translate3d(calc(var(--sea-drift) * 0.7071), 0.8787px, 0) scale(1.075, 1.0223); }
+  90.625% { transform: translate3d(calc(var(--sea-drift) * 0.8315), 1.3333px, 0) scale(1.075, 1.0250); }
+  93.75% { transform: translate3d(calc(var(--sea-drift) * 0.9239), 1.8519px, 0) scale(1.075, 1.0281); }
+  96.875% { transform: translate3d(calc(var(--sea-drift) * 0.9808), 2.4147px, 0) scale(1.075, 1.0315); }
+  100% { transform: translate3d(calc(var(--sea-drift) * 1.0000), 3.0000px, 0) scale(1.075, 1.0350); }
+}

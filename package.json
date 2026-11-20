@@ -1,0 +1,27 @@
+{
+  "name": "surfare",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "concurrently -k -n frontend,backend -c cyan,magenta \"npm run dev --workspace frontend\" \"npm run backend:dev\"",
+    "build": "npm run build --workspace frontend",
+    "test": "npm run test --workspace frontend",
+    "preview": "npm run preview --workspace frontend",
+    "backend:dev": "npm run dev --workspace backend",
+    "backend:start": "npm run start --workspace backend",
+    "backend:test": "npm run test --workspace backend",
+    "worker:dev": "npm run worker:dev --workspace backend",
+    "worker:deploy": "npm run worker:deploy --workspace backend"
+  },
+  "engines": {
+    "node": ">=22.13.0",
+    "npm": ">=10"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}

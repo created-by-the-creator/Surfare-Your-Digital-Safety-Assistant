@@ -1,0 +1,51 @@
+[
+  {
+    "name": "Tagalog direct threat",
+    "kind": "message",
+    "text": "sendan moko ng pera ngayon o papatayin kita",
+    "uncertain": false,
+    "expected": "High risk"
+  },
+  {
+    "name": "Tagalog threat recovered from image",
+    "kind": "image",
+    "text": "sendan moko ng pera ngayon o papatayin kita",
+    "uncertain": false,
+    "expected": "High risk"
+  },
+  {
+    "name": "Tagalog threat recovered from QR",
+    "kind": "qr",
+    "text": "sendan moko ng pera ngayon o papatayin kita",
+    "uncertain": false,
+    "expected": "High risk"
+  },
+  {
+    "name": "Gift card countdown and information request",
+    "kind": "image",
+    "text": "CONGRATULATIONS! A $1000 gift card is reserved for you. Click CONTINUE to claim your prize. Enter your correct information. You only have 4 minutes 14 seconds to claim it!",
+    "uncertain": false,
+    "expected": "Suspicious"
+  },
+  {
+    "name": "Ordinary meeting reminder",
+    "kind": "message",
+    "text": "Our meeting is tomorrow afternoon.",
+    "uncertain": false,
+    "expected": "Insufficient evidence"
+  },
+  {
+    "name": "Uncertain OCR remains unconfirmed",
+    "kind": "image",
+    "text": "Our meeting is tomorrow afternoon.",
+    "uncertain": true,
+    "expected": "Insufficient evidence"
+  },
+  {
+    "name": "Wi-Fi QR payload is not authenticated",
+    "kind": "qr",
+    "text": "WIFI:T:WPA;S:Home network;P:password here;;",
+    "uncertain": false,
+    "expected": "Insufficient evidence"
+  }
+]

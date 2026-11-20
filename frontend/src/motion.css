@@ -1,0 +1,115 @@
+:root {
+  --motion-spring: cubic-bezier(.2, 1.45, .35, 1);
+  --motion-settle: cubic-bezier(.22, .8, .28, 1);
+  --reveal-ease: var(--motion-spring);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :where(button, a[href], summary, .upload-button, input[type="checkbox"], input[type="radio"]) {
+    -webkit-tap-highlight-color: transparent;
+    transform-origin: center;
+  }
+
+  /* Keep each component's color and shadow transitions while sharing the
+     physical response. Individual scale composes with existing transforms. */
+  body :is(button[class], a[href][class], summary, .upload-button),
+  .site-header .header-control,
+  .risks-section .privacy-toggle,
+  .ask-dialog .ask-chip {
+    transition-property: background-color, border-color, color, box-shadow, opacity, transform, scale;
+    transition-duration: .22s, .22s, .22s, .28s, .2s, .42s, .42s;
+    transition-timing-function: ease, ease, ease, ease, ease, var(--motion-spring), var(--motion-spring);
+  }
+  body :is(button, a[href], summary, .upload-button):active:not(:disabled):not([aria-disabled="true"]) {
+    scale: .97;
+  }
+  .site-header .header-control > .header-chevron,
+  .risks-section .privacy-toggle svg,
+  .feedback-dropdown-button svg,
+  .result-accordion summary svg {
+    transition: transform .45s var(--motion-spring);
+  }
+  .site-header .connection-preference input::after { transition: transform .42s var(--motion-spring); }
+
+  .site-header .header-popover,
+  .result-save-popover,
+  .feedback-dropdown-list {
+    transform-origin: top right;
+    animation: fluid-popover .52s var(--motion-settle) both;
+  }
+  .language-option { animation: fluid-item .46s var(--motion-settle) both; }
+  .language-option:nth-child(2) { animation-delay: 35ms; }
+  .language-option:nth-child(3) { animation-delay: 70ms; }
+  .tab-panel > .field-group,
+  .privacy-details:not([hidden]),
+  .golden-rules-content,
+  .result-accordion[open] > :not(summary) {
+    animation: fluid-panel .54s var(--motion-settle) both;
+  }
+  .privacy-detail { animation: fluid-item .55s var(--motion-settle) both; }
+  .privacy-detail:nth-child(2) { animation-delay: 45ms; }
+  .privacy-detail:nth-child(3) { animation-delay: 90ms; }
+  .feedback-dialog,
+  .camera-dialog,
+  .tour-invite:not(.is-closing) {
+    animation: fluid-panel .6s var(--motion-settle) both;
+  }
+  .ask-panel-position > .ask-dialog:not(.is-closing) {
+    animation: fluid-panel .6s var(--motion-settle) both;
+  }
+  .ask-dialog .chat-bubble,
+  .ask-dialog .ask-content,
+  .risk-meter-wrap,
+  .result-details,
+  .tour-message {
+    animation: fluid-item .54s var(--motion-settle) both;
+  }
+  .scroll-reveal {
+    transition-timing-function: ease, var(--motion-spring), var(--motion-settle);
+    transition-duration: .6s, .8s, .55s;
+  }
+  .check-card.scroll-reveal {
+    transition-timing-function: var(--motion-settle), ease, var(--motion-spring), var(--motion-settle);
+    transition-duration: .5s, .6s, .8s, .55s;
+  }
+  .risk-card, .step-card, .upload-area {
+    transition: translate .5s var(--motion-spring), box-shadow .3s ease, border-color .25s ease;
+  }
+  .field-group :is(textarea, input), .ask-form, .feedback-field {
+    transition: border-color .25s ease, box-shadow .3s ease, background-color .25s ease;
+  }
+}
+
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+  body :is(button, a[href], summary, .upload-button):hover:not(:disabled):not([aria-disabled="true"]) { scale: 1.018; }
+  .risk-card:hover, .step-card:hover, .upload-area:hover { translate: 0 -4px; }
+  .scroll-reveal:not(.is-revealed):hover { translate: 0 28px; }
+}
+
+@keyframes fluid-popover {
+  0% { opacity: 0; translate: 0 -9px; scale: .94; filter: blur(3px); }
+  52% { opacity: 1; translate: 0 3px; scale: 1.018; filter: blur(.3px); }
+  76% { translate: 0 -1px; scale: .995; filter: blur(0); }
+  100% { opacity: 1; translate: 0 0; scale: 1; filter: blur(0); }
+}
+@keyframes fluid-panel {
+  0% { opacity: 0; translate: 0 18px; scale: .975; filter: blur(3px); }
+  48% { opacity: 1; translate: 0 -5px; scale: 1.008; filter: blur(.4px); }
+  72% { translate: 0 2px; scale: .998; filter: blur(0); }
+  100% { opacity: 1; translate: 0 0; scale: 1; filter: blur(0); }
+}
+@keyframes fluid-item {
+  0% { opacity: 0; translate: 0 12px; filter: blur(2px); }
+  52% { opacity: 1; translate: 0 -3px; filter: blur(.2px); }
+  76% { translate: 0 1px; filter: blur(0); }
+  100% { opacity: 1; translate: 0 0; filter: blur(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html, :root { scroll-behavior: auto; }
+  body *, body *::before, body *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

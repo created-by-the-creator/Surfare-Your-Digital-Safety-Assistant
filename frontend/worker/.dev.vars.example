@@ -1,0 +1,2 @@
+SAFE_BROWSING_API_KEY=replace-with-a-local-development-key
+ALLOWED_ORIGIN=http://localhost:5173

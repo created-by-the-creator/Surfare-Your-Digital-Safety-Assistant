@@ -1,0 +1,6 @@
+name = "surfare-safe-browsing"
+main = "index.js"
+compatibility_date = "2026-03-01"
+
+[vars]
+ALLOWED_ORIGIN = "https://your-surfare-domain.example"
