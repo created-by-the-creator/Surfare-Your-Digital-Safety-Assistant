@@ -1,1 +1,21 @@
-node_modules
+# Environment secrets
+.env
+.env.*
+!.env.example
+.dev.vars
+**/.dev.vars
+**/.dev.vars.*
+!backend/.dev.vars.example
+
+# Dependencies
+node_modules/
+
+# Build outputs
+dist/
+build/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
